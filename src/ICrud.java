@@ -1,7 +1,7 @@
 import java.sql.Connection;
 import java.util.Set;
 
-public interface ICrud<T,ID> {
+public interface ICrud<T,ID> extends AutoCloseable {
     void inserir(T object);
 
     T buscarId(ID id);
