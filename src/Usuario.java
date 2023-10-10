@@ -3,7 +3,12 @@ public class Usuario {
     private String nome;
     private String senha;
     private Integer idade;
+    private Carro carro;
 
+    public Usuario(Integer id, String nome, String senha, Integer idade,Carro carro) {
+        this(id,nome,senha,idade);
+        this.carro = carro;
+    }
     public Usuario(Integer id, String nome, String senha, Integer idade) {
         this.id = id;
         this.nome = nome;
@@ -43,6 +48,14 @@ public class Usuario {
         this.idade = idade;
     }
 
+    public Carro getCarro() {
+        return carro;
+    }
+
+    public void setCarro(Carro carro) {
+        this.carro = carro;
+    }
+
     @Override
     public String toString() {
         return "Usuario{" +
@@ -50,6 +63,7 @@ public class Usuario {
                 ", nome='" + nome + '\'' +
                 ", senha='" + senha + '\'' +
                 ", idade=" + idade +
+                ", carro=" + carro+
                 '}';
     }
 }
